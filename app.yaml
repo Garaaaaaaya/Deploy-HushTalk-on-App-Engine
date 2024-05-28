@@ -1,0 +1,28 @@
+runtime: php83
+service: hushtalk-website
+
+runtime_config:
+  document_root: .
+
+handlers:
+# Serve a directory as a static resource.
+- url: /stylesheet
+  static_dir: stylesheet
+
+# Serve images as static resources.
+- url: /assets/(.+\.(gif|png|jpg|svg))$
+  static_files: assets/\1
+  upload: assets/(.+\.(gif|png|jpg|svg))$
+
+# Serve your app through a front controller at index.php or public/index.php.
+- url: .*
+  script: auto
+
+entrypoint :
+  serve handler.php
+
+env_variables:
+  CLOUDSQL_USER: root
+  CLOUDSQL_DB: prak-tcc
+  CLOUDSQL_PASSWORD: ''
+  CLOUDSQL_DSN: /cloudsql/e-11-415004:asia-southeast2:database

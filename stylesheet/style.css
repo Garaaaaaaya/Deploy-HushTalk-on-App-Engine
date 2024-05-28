@@ -1,0 +1,50 @@
+
+
+.container {
+  margin-top: 30px;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.card-title {
+  margin-top: 0;
+}
+
+.card-body {
+  padding: 10px;
+}
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.file-upload {
+  margin-bottom: 15px;
+}
+
+.image-preview {
+  max-width: 150px;
+  max-height: 150px;
+  margin-bottom: 15px;
+}
+
+
